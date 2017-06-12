@@ -14,4 +14,15 @@ using Reexport
 # @reexport using FeatherFiles
 @reexport using VegaLite
 
+export @sub
+
+macro sub(x)
+    quote
+        x -> begin
+            x |> $(x)
+            return x
+        end
+    end
+end
+
 end # module
