@@ -4,8 +4,7 @@ os:
   - linux
   - osx
 julia:
-  - 0.5
-  - nightly
+  - 0.6
 notifications:
   email: false
 git:
@@ -29,7 +28,5 @@ git:
 #script:
 #  - julia -e 'Pkg.clone(pwd()); Pkg.build("Dataverse"); Pkg.test("Dataverse"; coverage=true)'
 after_success:
-  # push coverage results to Coveralls
-  - julia -e 'cd(Pkg.dir("Dataverse")); Pkg.add("Coverage"); using Coverage; Coveralls.submit(Coveralls.process_folder())'
   # push coverage results to Codecov
   - julia -e 'cd(Pkg.dir("Dataverse")); Pkg.add("Coverage"); using Coverage; Codecov.submit(Codecov.process_folder())'
