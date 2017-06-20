@@ -14,6 +14,8 @@ using Reexport
 # @reexport using FeatherFiles
 @reexport using VegaLite
 
+export vlplot
+
 export @sub
 
 macro sub(x)
@@ -24,5 +26,7 @@ macro sub(x)
         end
     end
 end
+
+const vlplot = VegaLite.data_values
 
 end # module
