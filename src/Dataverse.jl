@@ -11,7 +11,7 @@ using Reexport
 @reexport using ExcelFiles
 @reexport using StatFiles
 @reexport using CSVFiles
-# @reexport using FeatherFiles
+@reexport using FeatherFiles
 @reexport using VegaLite
 
 export vlplot

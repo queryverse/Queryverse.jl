@@ -15,5 +15,6 @@ FileIO
 ExcelFiles
 StatFiles
 CSVFiles
+FeatherFiles
 
 DataFrames
