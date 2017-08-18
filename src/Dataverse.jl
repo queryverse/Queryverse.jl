@@ -3,7 +3,6 @@ module Dataverse
 using Reexport
 
 @reexport using DataValues
-@reexport using DataValueArrays
 @reexport using IterableTables
 @reexport using Query
 @reexport using DataFrames
