@@ -15,9 +15,9 @@ using Reexport
 
 export vlplot, DV
 
-export @sub
+export @tee
 
-macro sub(x)
+macro tee(x)
     quote
         x -> begin
             x |> $(x)
