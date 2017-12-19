@@ -7,8 +7,8 @@ df = load("testdata.csv") |>
 @query(i, begin
 @select {i.Count, i.Year}
 end) |>
-@sub(save("testoutput.csv")) |>
-# @sub(begin
+@tee(save("testoutput.csv")) |>
+# @tee(begin
 #     data_values() |>
 #     mark_point() |>
 #     encoding_x_ord(:Year) |>
