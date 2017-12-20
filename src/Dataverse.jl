@@ -11,7 +11,7 @@ using Reexport
 @reexport using StatFiles
 @reexport using CSVFiles
 @reexport using FeatherFiles
-@reexport using VegaLite
+# @reexport using VegaLite
 
 export vlplot, DV
 
@@ -26,7 +26,7 @@ macro tee(x)
     end
 end
 
-const vlplot = VegaLite.data_values
+# const vlplot = VegaLite.data_values
 const DV = DataValues.DataValue
 
 end # module
