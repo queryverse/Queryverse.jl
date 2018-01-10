@@ -1,4 +1,4 @@
-The Dataverse.jl package is licensed under the MIT "Expat" License:
+The Queryverse.jl package is licensed under the MIT "Expat" License:
 
 > Copyright (c) 2017: David Anthoff.
 > 

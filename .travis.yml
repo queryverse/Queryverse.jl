@@ -24,7 +24,7 @@ addons:
 #  - if [ $TRAVIS_OS_NAME = osx ]; then brew install gcc; fi
 
 script:
-  - julia -e 'ENV["PYTHON"]=""; Pkg.clone(pwd()); Pkg.build("Dataverse"); Pkg.test("Dataverse"; coverage=true)'
+  - julia -e 'ENV["PYTHON"]=""; Pkg.clone(pwd()); Pkg.build("Queryverse"); Pkg.test("Queryverse"; coverage=true)'
 after_success:
   # push coverage results to Codecov
-  - julia -e 'cd(Pkg.dir("Dataverse")); Pkg.add("Coverage"); using Coverage; Codecov.submit(Codecov.process_folder())'
+  - julia -e 'cd(Pkg.dir("Queryverse")); Pkg.add("Coverage"); using Coverage; Codecov.submit(Codecov.process_folder())'

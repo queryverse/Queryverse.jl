@@ -1,4 +1,4 @@
-module Dataverse
+module Queryverse
 
 using Reexport
 
@@ -13,7 +13,7 @@ using Reexport
 @reexport using FeatherFiles
 # @reexport using VegaLite
 
-export vlplot, DV
+export DV
 
 export @tee
 

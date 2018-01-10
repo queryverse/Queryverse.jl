@@ -1,7 +1,7 @@
-using Dataverse
+using Queryverse
 using Base.Test
 
-@testset "Dataverse" begin
+@testset "Queryverse" begin
 
 df = load("testdata.csv") |>
 @query(i, begin
