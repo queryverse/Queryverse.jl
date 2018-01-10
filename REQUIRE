@@ -1,4 +1,4 @@
-julia 0.6-pre
+julia 0.6
 
 Reexport
 
@@ -15,5 +15,8 @@ ExcelFiles
 StatFiles
 CSVFiles
 FeatherFiles
+ParquetFiles
 
 DataFrames
+
+DataVoyager

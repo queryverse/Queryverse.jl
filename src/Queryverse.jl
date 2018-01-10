@@ -3,7 +3,7 @@ module Queryverse
 using Reexport
 
 @reexport using DataValues
-@reexport using IterableTables
+import IterableTables
 @reexport using Query
 @reexport using DataFrames
 @reexport using FileIO
@@ -11,7 +11,9 @@ using Reexport
 @reexport using StatFiles
 @reexport using CSVFiles
 @reexport using FeatherFiles
-# @reexport using VegaLite
+@reexport using ParquetFiles
+@reexport using VegaLite
+@reexport using DataVoyager
 
 export DV
 
@@ -26,7 +28,6 @@ macro tee(x)
     end
 end
 
-# const vlplot = VegaLite.data_values
 const DV = DataValues.DataValue
 
 end # module
