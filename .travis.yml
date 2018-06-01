@@ -1,5 +1,6 @@
 ## Documentation: http://docs.travis-ci.com/user/languages/julia/
 language: julia
+sudo: required
 os:
   - linux
   - osx
@@ -20,6 +21,9 @@ addons:
   apt:
     packages:
     - liblzma-dev
+    - xvfb
+    - xauth
+    - libgtk-3-0
 #before_script: # homebrew for mac
 #  - if [ $TRAVIS_OS_NAME = osx ]; then brew install gcc; fi
 
