@@ -24,11 +24,11 @@ addons:
     - xvfb
     - xauth
     - libgtk-3-0
-#before_script: # homebrew for mac
-#  - if [ $TRAVIS_OS_NAME = osx ]; then brew install gcc; fi
-
+before_script:
+  - if [[ `uname` = "Linux" ]]; then TESTCMD="xvfb-run julia"; else TESTCMD="julia"; fi
 script:
-  - julia -e 'ENV["PYTHON"]=""; Pkg.clone(pwd()); Pkg.build("Queryverse"); Pkg.test("Queryverse"; coverage=true)'
+  - julia -e 'ENV["PYTHON"]=""; Pkg.clone(pwd()); Pkg.build("Queryverse")'
+  - $TESTCMD -e 'Pkg.test("Queryverse"; coverage=true)'
 after_success:
   # push coverage results to Codecov
   - julia -e 'cd(Pkg.dir("Queryverse")); Pkg.add("Coverage"); using Coverage; Codecov.submit(Codecov.process_folder())'
