@@ -19,10 +19,10 @@ export DV
 
 export @tee
 
-macro tee(x)
+macro tee(ex)
     quote
         x -> begin
-            x |> $(x)
+            x |> $(esc(ex))
             return x
         end
     end
