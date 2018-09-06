@@ -1,5 +1,5 @@
 using Queryverse
-using Base.Test
+using Test
 
 @testset "Queryverse" begin
 

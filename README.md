@@ -1,9 +1,9 @@
 # Queryverse
 
 [![Project Status: Active - The project has reached a stable, usable state and is being actively developed.](http://www.repostatus.org/badges/latest/active.svg)](http://www.repostatus.org/#active)
-[![Build Status](https://travis-ci.org/davidanthoff/Queryverse.jl.svg?branch=master)](https://travis-ci.org/davidanthoff/Queryverse.jl)
-[![Build status](https://ci.appveyor.com/api/projects/status/361dkbo37skv3s8f/branch/master?svg=true)](https://ci.appveyor.com/project/davidanthoff/queryverse-jl/branch/master)
-[![codecov.io](http://codecov.io/github/davidanthoff/Queryverse.jl/coverage.svg?branch=master)](http://codecov.io/github/davidanthoff/Queryverse.jl?branch=master)
+[![Build Status](https://travis-ci.org/queryverse/Queryverse.jl.svg?branch=master)](https://travis-ci.org/queryverse/Queryverse.jl)
+[![Build status](https://ci.appveyor.com/api/projects/status/4bf4b25hr0b68xbm/branch/master?svg=true)](https://ci.appveyor.com/project/queryverse/queryverse-jl/branch/master)
+[![codecov.io](http://codecov.io/github/queryverse/Queryverse.jl/coverage.svg?branch=master)](http://codecov.io/github/queryverse/Queryverse.jl?branch=master)
 
 ## Overview
 
