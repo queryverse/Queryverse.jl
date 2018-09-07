@@ -1,34 +1,26 @@
-## Documentation: http://docs.travis-ci.com/user/languages/julia/
 language: julia
-sudo: required
 os:
   - linux
   - osx
 julia:
-  - 0.6
+  - 0.7
+  - 1.0
+  - nightly
 notifications:
   email: false
-git:
-  depth: 99999999
-
-## uncomment the following lines to allow failures on nightly julia
-## (tests will run but not make your overall status red)
-#matrix:
-#  allow_failures:
-#  - julia: nightly
-
-addons:
-  apt:
-    packages:
-    - liblzma-dev
-    - xvfb
-    - xauth
-    - libgtk-3-0
-before_script:
-  - if [[ `uname` = "Linux" ]]; then TESTCMD="xvfb-run julia"; else TESTCMD="julia"; fi
+branches:
+  only:
+  - master
+  - /release-.*/
+  - /v(\d+)\.(\d+)\.(\d+)/   
+matrix:
+  allow_failures:
+  - julia: nightly
+env:
+  - PYTHON=""
 script:
-  - julia -e 'ENV["PYTHON"]=""; Pkg.clone(pwd()); Pkg.build("Queryverse")'
-  - $TESTCMD -e 'Pkg.test("Queryverse"; coverage=true)'
+  - if [[ -a .git/shallow ]]; then git fetch --unshallow; fi
+  - if [[ `uname` = "Linux" ]]; then TESTCMD="xvfb-run julia"; else TESTCMD="julia"; fi
+  - $TESTCMD --check-bounds=yes -e 'using Pkg; Pkg.clone(pwd()); Pkg.build("Queryverse"); Pkg.test("Queryverse"; coverage=true)'
 after_success:
-  # push coverage results to Codecov
   - julia -e 'cd(Pkg.dir("Queryverse")); Pkg.add("Coverage"); using Coverage; Codecov.submit(Codecov.process_folder())'
