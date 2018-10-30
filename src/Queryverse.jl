@@ -11,7 +11,7 @@ import IterableTables
 @reexport using StatFiles
 @reexport using CSVFiles
 @reexport using FeatherFiles
-# @reexport using ParquetFiles
+@reexport using ParquetFiles
 @reexport using VegaLite
 @reexport using DataVoyager
 
