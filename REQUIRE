@@ -17,6 +17,7 @@ CSVFiles 0.9.1
 FeatherFiles 0.5.1
 ParquetFiles 0.1.0
 
+QueryTables
 DataFrames 0.13.1
 
 DataVoyager 0.3.0

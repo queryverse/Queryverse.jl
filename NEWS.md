@@ -1,3 +1,6 @@
+# Queryverse.jl v0.3.0 Release Notes
+* Add QueryTables.jl
+
 # Queryverse.jl v0.2.0 Release Notes
 * Add ParquetFiles back into the mix
 
