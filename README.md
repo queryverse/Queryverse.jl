@@ -13,5 +13,5 @@ Queryverse.jl is a meta package that pulls together a number of packages for han
 
 You can add the package with:
 ````julia
-Pkg.add("Queryverse")
+pkg> add Queryverse
 ````
