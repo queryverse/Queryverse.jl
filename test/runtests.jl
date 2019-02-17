@@ -3,7 +3,7 @@ using Test
 
 @testset "Queryverse" begin
 
-df = load("testdata.csv") |>
+df = load(joinpath(@__DIR__, "testdata.csv")) |>
 @query(i, begin
 @select {i.Count, i.Year}
 end) |>
