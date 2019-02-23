@@ -24,3 +24,13 @@ script:
   - $TESTCMD --check-bounds=yes -e 'using Pkg; Pkg.clone(pwd()); Pkg.build("Queryverse"); Pkg.test("Queryverse"; coverage=true)'
 after_success:
   - julia -e 'using Pkg; cd(Pkg.dir("Queryverse")); Pkg.add("Coverage"); using Coverage; Codecov.submit(process_folder())'
+
+jobs:
+  include:
+    - stage: "Documentation"
+      julia: 1.1
+      os: linux
+      script:
+        - julia --project=docs/ -e 'using Pkg; Pkg.instantiate(); Pkg.develop(PackageSpec(path=pwd()))'
+        - julia --project=docs/ --color=yes docs/make.jl
+      after_success: skip
