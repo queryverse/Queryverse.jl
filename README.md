@@ -7,7 +7,7 @@
 
 ## Overview
 
-Queryverse.jl is a meta package that pulls together a number of packages for handling data in julia. The package is (slowly) being documented at http://www.david-anthoff.com/jl4ds/stable/.
+Queryverse.jl is a meta package that pulls together a number of packages for handling data in julia. You can learn more at https://www.queryverse.org/.
 
 ## Installation
 
