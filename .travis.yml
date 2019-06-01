@@ -17,12 +17,15 @@ branches:
 matrix:
   allow_failures:
   - julia: nightly
+dist: xenial
+services:
+  - xvfb
+addons:
+  apt:
+    packages:
+    - libgconf-2-4
 env:
   - PYTHON=""
-script:
-  - if [[ -a .git/shallow ]]; then git fetch --unshallow; fi
-  - if [[ `uname` = "Linux" ]]; then TESTCMD="xvfb-run julia"; else TESTCMD="julia"; fi
-  - $TESTCMD --check-bounds=yes -e 'using Pkg; Pkg.clone(pwd()); Pkg.build("Queryverse"); Pkg.test("Queryverse"; coverage=true)'
 after_success:
   - julia -e 'using Pkg; cd(Pkg.dir("Queryverse")); Pkg.add("Coverage"); using Coverage; Codecov.submit(process_folder())'
 
