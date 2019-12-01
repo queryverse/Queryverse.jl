@@ -18,12 +18,6 @@ Reexport = "189a3867-3050-52da-a836-e630ba90ab69"
 StatFiles = "1463e38c-9381-5320-bcd4-4134955f093a"
 VegaLite = "112f6efa-9a02-5b7d-90c0-432ed331239a"
 
-[extras]
-Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
-
-[targets]
-test = ["Test"]
-
 [compat]
 CSVFiles = "≥ 0.9.1"
 DataFrames = "≥ 0.13.1"
@@ -35,7 +29,14 @@ FileIO = "≥ 1.0.0"
 IterableTables = "0.8.3, 0.9, 0.10, 0.11, 1"
 ParquetFiles = "≥ 0.1.0"
 Query = "≥ 0.10.0"
+QueryTables = "0.1"
 Reexport = "≥ 0.2.0"
 StatFiles = "≥ 0.6.1"
 VegaLite = "0.4, 0.5, 0.6, 0.7, 1"
 julia = "1"
+
+[extras]
+Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
+
+[targets]
+test = ["Test"]
