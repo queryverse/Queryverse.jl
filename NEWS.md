@@ -1,3 +1,7 @@
+# Queryverse.jl v1.0.0 Release Notes
+* Remove QueryTables.jl and add DataTables.jl
+* Update all minimal versions of all packages
+
 # Queryverse.jl v0.3.1 Release Notes
 * Make a test more robust
 
