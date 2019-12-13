@@ -5,7 +5,7 @@ using Reexport
 @reexport using DataValues
 import IterableTables
 @reexport using Query
-@reexport using QueryTables
+@reexport using DataTables
 @reexport using DataFrames
 @reexport using FileIO
 @reexport using ExcelFiles
