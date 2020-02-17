@@ -26,7 +26,7 @@ jobs:
             julia-version: 1.2.0
 
     steps:
-      - uses: actions/checkout@v1.0.0
+      - uses: actions/checkout@v2
       - uses: julia-actions/setup-julia@latest
         with:
           version: ${{ matrix.julia-version }}
@@ -43,6 +43,6 @@ jobs:
   formatlint:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1.0.0
+      - uses: actions/checkout@v2
       - uses: julia-actions/setup-julia@latest
       - uses: julia-actions/julia-codeformat-lint@releases/v1
