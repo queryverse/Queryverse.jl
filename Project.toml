@@ -1,6 +1,6 @@
 name = "Queryverse"
 uuid = "612083be-0b0f-5412-89c1-4e7c75506a58"
-version = "0.4.0-DEV"
+version = "0.5.0"
 
 [deps]
 CSVFiles = "5d742f6a-9f54-50ce-8119-2520741973ca"
