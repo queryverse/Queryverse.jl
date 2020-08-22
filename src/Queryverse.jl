@@ -22,7 +22,7 @@ export @tee
 
 macro tee(ex)
     quote
-        x->begin
+        x -> begin
             x |> $(esc(ex))
             return x
         end
