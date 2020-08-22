@@ -21,7 +21,7 @@ DataFrame
 
     io = IOBuffer()
     f(x) = print(io, sum(x + x))
-    1:10 |> @tee(f) |> x->print(io, " ", sum(x))
+    1:10 |> @tee(f) |> x -> print(io, " ", sum(x))
     @test String(take!(io)) == "110 55"
 
 end
