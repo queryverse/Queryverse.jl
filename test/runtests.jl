@@ -5,8 +5,8 @@ using Test
 
     df = load(joinpath(@__DIR__, "testdata.csv")) |>
 @query(i, begin
-        @select {i.Count, i.Year}
-    end) |>
+    @select {i.Count, i.Year}
+end) |>
 @tee(save("testoutput.csv")) |>
 # @tee(begin
 #     data_values() |>
