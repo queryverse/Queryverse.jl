@@ -20,7 +20,7 @@ VegaLite = "112f6efa-9a02-5b7d-90c0-432ed331239a"
 
 [compat]
 CSVFiles = "1"
-DataFrames = "0.20, 0.21, 0.22"
+DataFrames = "0.20, 0.21, 0.22, 1.0"
 DataTables = "0.1"
 DataValues = "0.4.4"
 DataVoyager = "0.3, 1"
