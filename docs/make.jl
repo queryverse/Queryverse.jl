@@ -1,10 +1,10 @@
 using Documenter, Queryverse
 
 makedocs(
-	modules=[Queryverse],
-	sitename="Queryverse.jl",
-	analytics="UA-132838790-1",
-	pages=[
+    modules=[Queryverse],
+    sitename="Queryverse.jl",
+    analytics="UA-132838790-1",
+    pages=[
         "Introduction" => "index.md"
     ]
 )
