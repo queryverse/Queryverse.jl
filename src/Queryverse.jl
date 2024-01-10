@@ -1,5 +1,9 @@
 module Queryverse
 
+if isdefined(Base, :Experimental) && isdefined(Base.Experimental, Symbol("@optlevel"))
+    @eval Base.Experimental.@optlevel 1
+end
+
 using Reexport
 
 @reexport using DataValues
