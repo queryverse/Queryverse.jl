@@ -3,3 +3,6 @@
 *.jl.mem
 Manifest.toml
 .vscode
+docs/build/
+docs/Manifest.toml
+test-output*.*
