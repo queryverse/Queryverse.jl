@@ -33,7 +33,7 @@ Query = "0.12, 1.0"
 Reexport = "0.2, 1"
 StatFiles = "0.8, 0.9, 1"
 VegaLite = "1, 2.0, 3"
-julia = "1"
+julia = "1.10"
 
 [extras]
 TestItemRunner = "f8b46487-2199-4994-9208-9a1283c18c0a"
